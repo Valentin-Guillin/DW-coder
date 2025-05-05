@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    padding: 0 1rem;
 }
 nav img{
     height: 70px;
@@ -27,7 +27,39 @@ header li{
 }   
 header a{
     color:white;
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 768) {
+    
+    .nave {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    
+    nav img {
+        margin-bottom: 1rem;
+    }
+    
+    header ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    
+    header li {
+        display: block;
+        width: 100%;
+    }
+    
+    header a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
 }
 
 /*index main*/
