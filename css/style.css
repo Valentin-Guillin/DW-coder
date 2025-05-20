@@ -8,6 +8,7 @@
     background-color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
 }
 .nave{
     background-color: black;
@@ -64,11 +65,11 @@ header a{
 
 /*index main*/
 .titulo{
+    font-size: 80px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     align-items: center;
     color: black;
-    font-size: 80px;
     margin: 100px;
 }
 .mates{
@@ -114,6 +115,20 @@ header a{
     margin: 5px;
 }
 
+/*Mates main*/
+.titulomates{
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 30px;
+    padding: 30px;
+    border: 10px;
+    text-align: center;
+}
+.mainmates section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 #footer{
     background-color: black;
