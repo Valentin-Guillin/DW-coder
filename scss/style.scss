@@ -1,9 +1,7 @@
 @import 'header';
 @import 'footer';
+@import 'main';
 
-
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
 
 
 body{
@@ -11,3 +9,5 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+

@@ -1,12 +1,4 @@
-.scrip {
-  color: black;
-  background-color: white;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 40px;
-  font-size: 20px;
-}
-
+@charset "UTF-8";
 .nave {
   background-color: black;
   height: 80px;
@@ -15,18 +7,216 @@
   justify-content: space-between;
   padding: 0 1rem;
 }
-.nave img {
+.nave div img {
   height: 70px;
   width: 70px;
 }
-.nave li {
+.nave ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.nave ul li {
   display: inline-block;
   padding: 0 10px;
 }
-.nave li a {
+.nave ul li a {
   color: white;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
+}
+.nave #menu-toggle {
+  display: none;
+}
+.nave .menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  padding: 0;
+}
+.nave .menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  position: relative;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nave {
+    /* (menú abierto) */
+  }
+  .nave ul {
+    flex-direction: column;
+    background-color: black;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 9;
+  }
+  .nave ul li {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .nave .menu-toggle {
+    display: flex;
+    z-index: 10;
+  }
+  .nave #menu-toggle:checked ~ ul {
+    transform: translateX(0);
+  }
+  .nave #menu-toggle:checked + .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+    position: relative;
+  }
+  .nave #menu-toggle:checked + .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .nave #menu-toggle:checked + .menu-toggle span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -8px;
+    position: relative;
+  }
+}
+#footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 2rem;
+}
+#footer div {
+  flex: 1 1 200px;
+}
+#footer div h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #f0c36d;
+}
+#footer div img {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+#footer div p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#footer div a {
+  display: inline-block;
+}
+#footer div a img {
+  transition: transform 0.3s ease;
+}
+#footer div a img:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 600px) {
+  #footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #footer div {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.titulo h1 {
+  font-family: "Arial Black", sans-serif;
+  font-size: 3rem;
+  color: #6b4f3b;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .titulo h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .titulo h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    padding: 0 0.5rem;
+  }
+}
+
+.carousel {
+  position: relative;
+}
+.carousel #carouselExample {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.carousel #carouselExample .carousel-inner .carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.carousel #carouselExample .carousel-control-prev,
+.carousel #carouselExample .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(107, 79, 59, 0.6);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.carousel #carouselExample .carousel-control-prev:hover,
+.carousel #carouselExample .carousel-control-next:hover {
+  background-color: rgba(107, 79, 59, 0.9);
+}
+.carousel #carouselExample .carousel-control-prev span,
+.carousel #carouselExample .carousel-control-next span {
+  filter: invert(1);
+}
+.carousel #carouselExample .carousel-control-prev {
+  left: 15px;
+}
+.carousel #carouselExample .carousel-control-next {
+  right: 15px;
+}
+@media (max-width: 480px) {
+  .carousel #carouselExample .carousel-control-prev,
+  .carousel #carouselExample .carousel-control-next {
+    width: 35px;
+    height: 35px;
+  }
+  .carousel #carouselExample .carousel-control-prev span,
+  .carousel #carouselExample .carousel-control-next span {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 body {
