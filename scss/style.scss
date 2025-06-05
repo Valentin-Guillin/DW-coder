@@ -1,0 +1,13 @@
+@import 'header';
+@import 'footer';
+
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

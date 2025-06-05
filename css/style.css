@@ -1,3 +1,38 @@
+.scrip {
+  color: black;
+  background-color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  font-size: 20px;
+}
 
+.nave {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.nave img {
+  height: 70px;
+  width: 70px;
+}
+.nave li {
+  display: inline-block;
+  padding: 0 10px;
+}
+.nave li a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /*# sourceMappingURL=style.css.map */
